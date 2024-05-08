@@ -5,11 +5,12 @@ on:
     types: [opened]
     branches:
       - challenge
-
+      
 jobs:
   getflag:
-    runs-on: 
+    runs-on:
       labels: self-hosted
+
     steps:
     
       # - name: Run Python script to generate flag value
