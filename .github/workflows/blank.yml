@@ -8,7 +8,8 @@ on:
 
 jobs:
   getflag:
-    runs-on: myrunner
+    runs-on: 
+      labels: self-hosted
     steps:
     
       # - name: Run Python script to generate flag value
