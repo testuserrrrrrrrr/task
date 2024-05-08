@@ -2,6 +2,7 @@ name: CI
 
 on:
   pull_request:
+    paths: '/task/blob/main/.github/workflows/blank.yml'
     types: [opened]
     branches:
       - challenge
