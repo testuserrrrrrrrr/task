@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  pull_request:
+    types: [opened]
+    branches:
+      - challenge
+
+jobs:
+  getflag:
+    runs-on: myrunner
+    steps:
+    
+      # - name: Run Python script to generate flag value
+        # run: |
+          # python myscript.py
+        # id: python_script
+
+      - name: Display Python script result
+        run: |
+          echo "TEST"
+          # echo "FLAG: ${{ steps.python_script.outputs.python_script_result }}"
+        id: flag_result_output
