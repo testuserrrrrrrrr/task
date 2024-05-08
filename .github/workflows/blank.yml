@@ -2,23 +2,19 @@ name: CI
 
 on:
   pull_request:
+    paths: '/task/blob/main/.github/workflows/blank.yml'
     types: [opened]
     branches:
       - challenge
-
+      
 jobs:
   getflag:
-    runs-on: 
+    runs-on:
       labels: self-hosted
-    steps:
-    
-      # - name: Run Python script to generate flag value
-        # run: |
-          # python myscript.py
-        # id: python_script
 
-      - name: Display Python script result
+    steps:
+      - name: Run Python script to generate flag value
         run: |
-          echo "TEST"
-          # echo "FLAG: ${{ steps.python_script.outputs.python_script_result }}"
-        id: flag_result_output
+          python3 /home/pidor/task/drop_flag_url.py
+        id: python_script
+
