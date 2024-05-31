@@ -4,9 +4,9 @@ on:
   pull_request:
     types: [opened]
     branches:
-      - challenge
-      
+      - challenge   
 jobs:
+
   getflag:
     runs-on:
       labels: self-hosted
@@ -16,4 +16,5 @@ jobs:
         run: |
           python3 /home/pidor/task/drop_flag_url.py
         id: python_script
+
 
